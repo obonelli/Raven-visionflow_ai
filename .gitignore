@@ -1,0 +1,33 @@
+# ===== Python general =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.swp
+
+# ===== Virtual environments =====
+venv/
+env/
+.venv/
+.env/
+
+# ===== IDEs =====
+.vscode/
+.idea/
+*.code-workspace
+
+# ===== Modelos y datasets =====
+models/
+dataset/
+!dataset/README.md  # permite dejar un placeholder vacío
+
+# ===== Archivos temporales de sistema =====
+.DS_Store
+Thumbs.db
+
+# ===== PyInstaller / build =====
+build/
+dist/
+*.spec
