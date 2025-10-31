@@ -20,7 +20,15 @@ def list_images(folder):
 def extract_text(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     text = pytesseract.image_to_string(gray, lang="eng+spa")
-    return text.strip()
+    text = text.strip()
+
+    # 🔹 Log temporal para ver qué lee realmente
+    if not text:
+        print("[OCR] Sin texto detectado.")
+    else:
+        print(f"[OCR] Texto detectado: {text}")
+
+    return text
 
 
 def notify(msg):
